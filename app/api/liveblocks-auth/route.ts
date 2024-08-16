@@ -14,7 +14,7 @@ export async function POST(request: Request) {
         id,
         info: {
             id, 
-            name: `${username}`,
+            name:  username === null ? (`${firstName} ${lastName}`):(username) , username,
             email: emailAddresses[0].emailAddress,
             avatar: imageUrl,
             color: getUserColor(id),
