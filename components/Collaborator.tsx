@@ -50,7 +50,7 @@ const Collaborator = ({roomId, creatorId, collaborator, email, user}: Collaborat
         {creatorId === collaborator.id ? (
             <p className="text-sm text-blue-100">Owner</p>
         ): (
-            <div>
+            <div className="flex items-center">
                 <UserTypeSelector
                     userType={userType}
                     setUserType={setUserType || 'viewer'}
